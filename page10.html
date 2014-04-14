@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Portal Cracked</title>
+<link rel="stylesheet" href="css/style.css" />
+<script src="js/jquery-2.1.0.min.js" ></script>
+<script>
+
+
+$(document).ready(function() {
+    
+	 var checkLevel = localStorage.getItem("level9");
+	
+	if(checkLevel == null){
+			
+			window.location.href="page9.html";
+			}
+	
+	
+	$("#return").on("click",function(){
+		
+		
+			localStorage.clear();
+			window.location.href="auth.html";
+		
+		});
+	
+	
+	var StartMin = localStorage.getItem("StartMin");
+	var StartSec = localStorage.getItem("StartSec");
+	var StartHour = localStorage.getItem("StartHour");
+	
+	var EndMin = localStorage.getItem("EndMin");
+	var EndSec = localStorage.getItem("EndSec");
+	var EndHour = localStorage.getItem("EndHour");
+	
+	
+	if(StartHour!=EndHour){
+	
+	var eMin = parseInt(EndMin) + parseInt(60 - StartMin);
+	var eSec = EndSec - StartSec;
+		$("#time").html("Time Elasped : "+eMin.toString().replace(/\-/g,'') +" min "+eSec.toString().replace(/\-/g,'')+" sec");
+	
+	}
+	else
+	{
+	var eMin = parseInt(EndMin) - parseInt(StartMin);
+	var eSec = EndSec - StartSec;
+		$("#time").html("Time Elasped : "+eMin.toString().replace(/\-/g,'') +" min "+eSec.toString().replace(/\-/g,'')+" sec");
+	}
+
+	
+	
+});
+
+</script>
+
+<style>
+
+body{
+	
+	background:url(img/bg.jpg) no-repeat fixed;
+	background-size:cover;
+	
+	}
+	
+#return{
+	
+	background:#60F;
+	width:200px;
+	height:50px;
+	position:absolute;
+	top:500px;
+	left:400px;
+	border:none;
+	color:#fff;
+	font-size:24px;
+	
+	}	
+
+</style>
+
+</head>
+
+<body>
+<div class="wrapper">
+  <div class="inner">
+  <h1 style="font-size:77px">Congrats</h1>
+    <div class="desc">
+    You have successfully hacked the portal and are eligible for the 3rd Round!<br>
+	<p id="time"></p>
+    </div>
+    
+    <button id="return" value="Exit" > Exit</button>
+    
+  </div>
+</div>
+</body>
+</html>

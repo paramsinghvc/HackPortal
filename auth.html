@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Spin A Web</title>
+<script src="js/jquery-2.1.0.min.js" ></script>
+<link rel="stylesheet" href="css/style.css" />
+<style>
+
+body{
+	
+	background:url(img/html.jpg) no-repeat fixed;
+	background-size:cover;
+	
+	
+	}
+
+	
+#main{
+
+width:600px;
+height:400px;
+background:url(img/black.png);
+position:absolute;
+top:250px;
+left:50%;
+margin-left:-300px;
+
+}	
+
+
+#main ul{
+
+list-style:none;
+margin-top:60px;
+}
+#main ul li{
+
+padding:20px 20px;
+height:50px;
+
+}
+
+#main ul li input{
+
+width:250px;
+height:40px;
+float:right;
+margin-right:50px;
+padding:2px 10px;
+
+}
+#main ul li span{
+
+width:200px;
+padding:10px 20px;
+color:#fff;
+font-family:"Tahoma","Calibri","Verdana";
+font-size:34px;
+}
+.MetroButton{
+
+background:#FF8000  url(img/next2.png) right no-repeat;
+    width:150px;
+	padding:12px 30px;
+	height:46px;
+	padding-right:60px;
+	border:none;
+	outline:none;
+	position:relative;
+	top:30px;
+	left:160px;
+	color:#fff;
+	font-family:"Calibri","Tahoma";
+	font-size:32px;
+}
+
+.MetroButton:hover{
+background:#FF4000  url(img/next2.png) right no-repeat;
+cursor:pointer;
+}
+
+.MetroButton:active{
+background:#161712  url(img/next2.png) right no-repeat;
+cursor:pointer;
+}
+
+</style>
+
+<script>
+
+$(document).ready(function(){
+
+
+$(".MetroButton").on("click",function(){
+
+var p = $("#pass").val();	
+	if(p == "www88"){
+	
+		window.location.href="index.html";
+		var curDate = new Date();
+		localStorage.setItem("StartMin",curDate.getMinutes());
+		localStorage.setItem("StartSec",curDate.getSeconds());
+		localStorage.setItem("StartHour",curDate.getHours());
+	}
+
+   });
+
+
+});
+
+
+
+</script>
+
+
+
+</head>
+
+<body>
+
+
+<div class="wrapper">
+  <div class="inner">
+  <h1 style="font-size:109px;color:#fff">SPIN A WEB</h1>
+    <div id="main">
+	<ul>
+	<li><span>Username</span><input type="text" name="name"></li>
+	<li><span>Passkey</span><input type="password" id="pass" name="passkey"></li>
+	</ul>
+	
+	<div class="MetroButton">Start Test</div>
+	</div>
+    
+    
+  </div>
+</div>
+
+
+
+
+</body>
+</html>

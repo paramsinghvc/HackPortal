@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Hack The Portal | Level 2</title>
+<link rel="stylesheet" href="css/style.css" />
+<script src="js/jquery-2.1.0.min.js" ></script>
+
+<script>
+
+
+$(document).ready(function() {
+    var checkLevel = localStorage.getItem("level1");
+	
+	if(checkLevel == null){
+			
+			window.location.href="index.html";
+			}
+		
+	var a="led-zeppelin";
+	
+$("form").submit(function(e){
+	e.preventDefault();
+	
+	var a = "led zeppelin";
+	
+	var ans = $("#Answer").val();
+	var altText = $("img").attr("alt");
+	if(ans.toLowerCase() == a){
+		
+			window.location.href="page3.html";
+				localStorage.setItem("level2","passed");
+		
+		}
+	
+	});
+	
+	
+});
+
+</script>
+
+</head>
+
+<body>
+<div class="wrapper">
+  <div class="inner"> 
+	<h1>Level 2</h1>
+    <form method="post" action="">
+      <div class="AnswerInput">
+	  <img src="img/2.jpg" />
+	      <input type="text" name="Answer" id="Answer">
+          <input type="submit" name="submit" id="submit" value="Submit" />
+			
+      </div>
+
+    </form>
+  </div>
+</div>
+</body>
+</html>
+

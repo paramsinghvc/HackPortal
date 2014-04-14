@@ -1,0 +1,91 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+body {
+	background: #FFF;
+}
+* {
+	padding: 0;
+	margin: 0;
+}
+.wrapper {
+	width: 1024px;
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	margin-left: -512px;
+	height: 600px;
+}
+.wrapper .desc{
+	
+		width: 600px;
+
+	margin: 20px;
+	font-size: 44px;
+	text-align: center;
+	position: absolute;
+	left: 50%;
+	margin-left: -300px;
+	top: 200px;
+	font-family: "Segoe UI Light", "Trebuchet MS", Verdana, sans-serif;
+	
+	}
+
+.wrapper h1 {
+	width: 600px;
+	height: 50px;
+	margin: 20px;
+	font-size: 44px;
+	text-align: center;
+	position: absolute;
+	left: 50%;
+	margin-left: -300px;
+	top: 0px;
+	font-family: "Segoe UI Light", "Trebuchet MS", Verdana, sans-serif;
+}
+.wrapper img {
+	width: 600px;
+	height: 450px;
+	position: absolute;
+	top: 100px;
+	left: 50%;
+	margin-left: -300px;
+}
+.wrapper video {
+	width: 600px;
+	height: 450px;
+	position: absolute;
+	top: 100px;
+	left: 50%;
+	margin-left: -300px;
+}
+.AnswerInput {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 570px;
+	width: 600px;
+}
+.AnswerInput #Answer {
+	width: 492px;
+	height: 40px;
+	border: none;
+	background: #CCC;
+	padding-left: 10px;
+	outline: none;
+}
+.AnswerInput #submit {
+	width: 97px;
+	height: 40px;
+	border: none;
+	background: #04B486;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	margin-left: -5px;
+	color: #fff;
+}
+.AnswerInput #submit:hover {
+	cursor: pointer;
+	background: #0B614B;
+}

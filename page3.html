@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Hack The Portal | Level 3</title>
+<link rel="stylesheet" href="css/style.css" />
+<script src="js/jquery-2.1.0.min.js" ></script>
+
+<script>
+
+
+$(document).ready(function() {
+	
+	
+var checkLevel = localStorage.getItem("level2");
+	
+	if(checkLevel == null){
+			
+			window.location.href="page2.html";
+			}
+	
+
+	
+$("form").submit(function(e){
+	e.preventDefault();
+
+	var altText = $("img").attr("alt");
+	var ans = $("#Answer").val();
+	if(ans.toLowerCase() == altText ){
+
+			window.location.href="page4.html";
+		    localStorage.setItem("level3","passed");
+		}
+	
+	});
+	
+	
+});
+
+</script>
+
+</head>
+
+<body>
+<div class="wrapper">
+  <div class="inner"> 
+  <h1>Level 3</h1>
+    <form method="post" action="">
+      <div class="AnswerInput">
+	  <img src="img/3.jpg"  style="width:377px;margin-left:-190px;" alt="neil armstrong"/ >
+      <input type="text" name="Answer" id="Answer">
+            <input type="submit" name="submit" id="submit" value="Submit" />
+			
+      </div>
+
+    </form>
+  </div>
+</div>
+</body>
+</html>
+

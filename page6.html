@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Hack The Portal | Level 6</title>
+
+<script src="js/jquery-2.1.0.min.js" ></script>
+
+<style>
+
+
+
+
+body {
+	background: #FFF;
+}
+* {
+	padding: 0;
+	margin: 0;
+}
+.wrapper {
+	width: 1024px;
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	margin-left: -512px;
+	height: 600px;
+}
+.wrapper h1 {
+	width: 600px;
+	height: 50px;
+	margin: 20px;
+	font-size: 44px;
+	text-align: center;
+	position: absolute;
+	left: 50%;
+	margin-left: -300px;
+	top: 0px;
+	font-family: "Segoe UI Light", "Trebuchet MS", Verdana, sans-serif;
+}
+.wrapper img {
+	width: 600px;
+	height: 450px;
+	position: absolute;
+	top: 100px;
+	left: 50%;
+	margin-left: -300px;
+}
+.wrapper video {
+	width: 600px;
+	height: 450px;
+	position: absolute;
+	top: 100px;
+	left: 50%;
+	margin-left: -300px;
+}
+.AnswerInput {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 570px;
+	width: 600px;
+}
+.AnswerInput #Answer {
+	width: 492px;
+	height: 40px;
+	border: none;
+	background: #CCC;
+	padding-left: 10px;
+	outline: none;
+}
+.AnswerInput #submit {
+	width: 97px;
+	height: 40px;
+	border: none;
+	background: #04B486;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	margin-left: -5px;
+	color: #fff;
+}
+.AnswerInput #submit:hover {
+	cursor: pointer;
+	background: #0B614B;
+}
+
+
+
+</style>
+
+
+
+<script>
+
+
+function SetAnswers(){
+	
+	localStorage.setItem("answer","plane crash");	
+	
+	
+	}
+
+$(document).ready(function() {
+       var checkLevel = localStorage.getItem("level5");
+	
+	
+	
+	function SetAnswer1(){
+	
+	localStorage.setItem("answer","hudson river landing");	
+	
+	
+	}
+	
+	
+	if(checkLevel == null){
+			
+			window.location.href="page5.html";
+			}
+
+	SetAnswer();
+	
+$("form").submit(function(e){
+	e.preventDefault();
+
+	var ans = $("#Answer").val();
+    var answer = localStorage.getItem("answer");
+	
+	if(ans.toLowerCase() == answer){
+		
+			window.location.href="page7.html?ans=karma";
+			localStorage.setItem("level6","passed");
+			localStorage.removeItem("answer");
+		
+		}
+	
+	});
+	
+	
+	
+	
+	
+	function SetAnswer(){
+	
+	localStorage.setItem("answer","miracle on the hudson");	
+	
+	
+	}
+	
+	
+});
+
+
+
+
+</script>
+
+
+
+</head>
+
+<body>
+<div class="wrapper">
+  <div class="inner">
+  <h1>Level 6</h1>
+    <form method="post" action="">
+      <div class="AnswerInput"> <img src="img/6.jpg" />
+        <input type="text" name="Answer" id="Answer">
+        <input type="submit" name="submit" id="submit" value="Submit" />
+      </div>
+    </form>
+  </div>
+</div>
+</body>
+</html>
