@@ -10,3 +10,5 @@ Steps to install:
 4) Your timer would be started and Level 1 would appear.
 
 Note: make sure you're using a HTML 5 browser as features like Localstorage have been used.
+
+![alt tag](https://www.dropbox.com/s/uox8klmohuw5pjh/Screenshot%20%2897%29.png)
